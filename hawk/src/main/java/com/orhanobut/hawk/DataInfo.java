@@ -1,6 +1,6 @@
 package com.orhanobut.hawk;
 
-final class DataInfo {
+public final class DataInfo {
 
   static final char TYPE_OBJECT = '0';
   static final char TYPE_LIST = '1';
