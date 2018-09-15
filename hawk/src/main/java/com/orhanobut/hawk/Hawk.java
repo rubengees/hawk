@@ -113,6 +113,7 @@ public final class Hawk {
 
   public static void destroy() {
     hawkFacade.destroy();
+    hawkFacade = new HawkFacade.EmptyHawkFacade();
   }
 
 }
