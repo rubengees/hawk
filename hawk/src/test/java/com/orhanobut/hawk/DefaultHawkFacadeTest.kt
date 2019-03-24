@@ -206,6 +206,13 @@ class DefaultHawkFacadeTest {
     verifyZeroInteractions(encryption, converter, serializer)
   }
 
+  @Test fun keys() {
+    `when`(storage.keys()).thenReturn(setOf("A", "B"))
+
+    assertThat(hawkFacade.keys()).isEqualTo(setOf("A", "B"))
+    verifyZeroInteractions(encryption, converter, serializer)
+  }
+
   @Test fun deleteAll() {
     `when`(storage.deleteAll()).thenReturn(true)
 

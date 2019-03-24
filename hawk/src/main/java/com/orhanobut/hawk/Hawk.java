@@ -1,6 +1,10 @@
 package com.orhanobut.hawk;
 
 import android.content.Context;
+import androidx.annotation.NonNull;
+
+import java.util.Collections;
+import java.util.Set;
 
 /**
  * Secure, simple key-value storage for Android.
@@ -70,6 +74,15 @@ public final class Hawk {
    */
   public static long count() {
     return hawkFacade.count();
+  }
+
+  /**
+   * Returns all keys currently present in the store
+   *
+   * @return the keys
+   */
+  @NonNull public static Set<String> keys() {
+    return hawkFacade.keys();
   }
 
   /**

@@ -19,6 +19,7 @@ android {
 
 dependencies {
   api deps.conceal
+  api deps.annotation
   implementation deps.gson
 
   testImplementation deps.junit

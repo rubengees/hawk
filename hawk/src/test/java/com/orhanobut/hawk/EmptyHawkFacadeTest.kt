@@ -53,6 +53,16 @@ class EmptyHawkFacadeTest {
 
   }
 
+  @Test fun keys() {
+    try {
+      hawkFacade.keys()
+      fail("")
+    } catch (e: Exception) {
+      assertFail(e)
+    }
+
+  }
+
   @Test fun deleteAll() {
     try {
       hawkFacade.deleteAll()

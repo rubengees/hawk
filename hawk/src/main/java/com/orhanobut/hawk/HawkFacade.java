@@ -1,5 +1,9 @@
 package com.orhanobut.hawk;
 
+import androidx.annotation.NonNull;
+
+import java.util.Set;
+
 public interface HawkFacade {
 
   <T> boolean put(String key, T value);
@@ -19,6 +23,8 @@ public interface HawkFacade {
   boolean isBuilt();
 
   void destroy();
+
+  @NonNull Set<String> keys();
 
   class EmptyHawkFacade implements HawkFacade {
 
@@ -40,6 +46,11 @@ public interface HawkFacade {
     @Override public long count() {
       throwValidation();
       return 0;
+    }
+
+    @Override @NonNull public Set<String> keys() {
+      throwValidation();
+      return null;
     }
 
     @Override public boolean deleteAll() {

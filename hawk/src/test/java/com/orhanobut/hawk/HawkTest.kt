@@ -57,6 +57,12 @@ class HawkTest {
     verify(hawkFacade).count()
   }
 
+  @Test fun keys() {
+    Hawk.keys()
+
+    verify(hawkFacade).keys()
+  }
+
   @Test fun deleteAll() {
     Hawk.deleteAll()
 

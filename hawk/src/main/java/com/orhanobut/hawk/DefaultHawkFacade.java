@@ -1,5 +1,9 @@
 package com.orhanobut.hawk;
 
+import androidx.annotation.NonNull;
+
+import java.util.Set;
+
 public class DefaultHawkFacade implements HawkFacade {
 
   private final Storage storage;
@@ -124,6 +128,10 @@ public class DefaultHawkFacade implements HawkFacade {
 
   @Override public long count() {
     return storage.count();
+  }
+
+  @Override @NonNull public Set<String> keys() {
+    return storage.keys();
   }
 
   @Override public boolean deleteAll() {

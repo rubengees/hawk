@@ -1,5 +1,9 @@
 package com.orhanobut.hawk;
 
+import androidx.annotation.NonNull;
+
+import java.util.Set;
+
 /**
  * Intermediate layer which stores the given data. Used by Hawk.
  *
@@ -52,6 +56,13 @@ public interface Storage {
    * @return entry count in the storage
    */
   long count();
+
+  /**
+   * Retrieve the keys currently present in the storage
+   *
+   * @return List of keys
+   */
+  @NonNull Set<String> keys();
 
   /**
    * Checks whether the storage contains an entry.

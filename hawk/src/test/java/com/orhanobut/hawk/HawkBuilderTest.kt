@@ -59,6 +59,10 @@ class HawkBuilderTest {
         return 0
       }
 
+      override fun keys(): Set<String> {
+        return emptySet()
+      }
+
       override fun contains(key: String): Boolean {
         return false
       }
